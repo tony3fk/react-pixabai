@@ -17,10 +17,10 @@ class Buscador extends Component {
       <form onSubmit={this.obtenerDatos}>
         <div className="row">
           <div className="form-group col-md-8">
-            <input ref={this.busquedaRef} type="text" className="form-control form-control-lg" placeholder="Busca tu imagen. Ej: Fútbol" ></input>
+            <input ref={this.busquedaRef} type="text" className="form-control form-control-lg" placeholder="Search your image: e.g: Soccer" ></input>
           </div>
           <div className="form-group col-md-4">
-            <input type="submit" className="btn btn-lg btn-danger btn-block" value="Buscar" ></input>
+            <input type="submit" className="btn btn-lg btn-danger btn-block" value="Search" ></input>
           </div>
         </div>
       </form>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Buscador from "./componentes/Buscador";
 import Resultado from "./componentes/Resultado";
+import Footer from "./componentes/Footer";
 
 class App extends Component {
 
@@ -10,8 +11,29 @@ class App extends Component {
     pagina:''
   }
 
+  scroll = () => {
+    const elemento = document.querySelector('.jumbotron');
+    elemento.scrollIntoView('smooth', 'start');
+  }
+
   paginaAnterior = () => {
-    console.log('anterior...');
+    //leer el state de la pagina actual
+    let pagina = this.state.pagina;
+
+    //si la página es 1 ya no restar
+    if (pagina === 1) return null;
+    
+    //restar 1 a la pagina actual
+    pagina -= 1;
+    //agregar el cambio
+     this.setState({
+      pagina
+     }, () => {
+         this.consultarApi();
+         this.scroll();
+    })
+
+    //console.log(pagina);
     
   }
   paginaSiguiente = () => {
@@ -21,20 +43,29 @@ class App extends Component {
     //sumar 1 a la pagina actual
     pagina += 1;
     //agregar el cambio
+    this.setState({
+      pagina
+    }, () => {
+        this.consultarApi();
+        this.scroll();
+    })
 
-    console.log(pagina);
+    //console.log(pagina);
     
     
   }
 
   consultarApi = () => {
-    const termino =this.state.termino;
-    const url = `https://pixabay.com/api/?key=15445030-0240a0631ee7a86760b0abfd5&q=${termino}&per_page=30`;
-     //console.log(url);
+    const termino = this.state.termino;
+    const pagina = this.state.pagina;
+    const url = `https://pixabay.com/api/?key=15445030-0240a0631ee7a86760b0abfd5&q=${termino}&per_page=30&page=${pagina}`;
     
+    console.log(url);
     fetch(url)
       .then(respuesta => respuesta.json())
       .then(resultado=>this.setState({imagenes:resultado.hits}))
+    
+    
 
   }
 
@@ -53,7 +84,8 @@ class App extends Component {
     return (
       <div className="app container">
         <div className="jumbotron">
-          <p className="lead text-center">Buscador de imágenes</p>
+          <h1 className=" text-center">IMAGE FINDER</h1>
+          <p className="lead text-center">Powered by Pixabay</p>
           <Buscador datosBusqueda={this.datosBusqueda} />
         </div>
 
@@ -64,7 +96,10 @@ class App extends Component {
             paginaSiguiente={this.paginaSiguiente}
             
           />
-       </div>
+        </div>
+        <div className=" row justify-content-center navbar navbar-fixed-bottom mt-5 pt-5">
+          <Footer />
+        </div>
 
         
       </div>
