@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-pixabai/static/css/main.34de6062.chunk.css",
+    "main.js": "/react-pixabai/static/js/main.9d20f8f1.chunk.js",
+    "main.js.map": "/react-pixabai/static/js/main.9d20f8f1.chunk.js.map",
+    "runtime-main.js": "/react-pixabai/static/js/runtime-main.09206e21.js",
+    "runtime-main.js.map": "/react-pixabai/static/js/runtime-main.09206e21.js.map",
+    "static/js/2.409b56fb.chunk.js": "/react-pixabai/static/js/2.409b56fb.chunk.js",
+    "static/js/2.409b56fb.chunk.js.map": "/react-pixabai/static/js/2.409b56fb.chunk.js.map",
+    "index.html": "/react-pixabai/index.html",
+    "precache-manifest.8b076d788d49d8d0db37959be99ad051.js": "/react-pixabai/precache-manifest.8b076d788d49d8d0db37959be99ad051.js",
+    "service-worker.js": "/react-pixabai/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/react-pixabai/static/css/main.34de6062.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09206e21.js",
+    "static/js/2.409b56fb.chunk.js",
+    "static/css/main.34de6062.chunk.css",
+    "static/js/main.9d20f8f1.chunk.js"
+  ]
+}
