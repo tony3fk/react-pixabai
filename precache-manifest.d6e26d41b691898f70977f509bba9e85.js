@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "51570791177488fb5a9f516209e4af9c",
+    "revision": "aba2dff63084e2ea91d1e261cc07aa79",
     "url": "/react-pixabai/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-pixabai/static/css/main.34de6062.chunk.css"
   },
   {
-    "revision": "e53e9539e29cd315697e",
-    "url": "/react-pixabai/static/js/2.409b56fb.chunk.js"
+    "revision": "7591c3c8a4002fba6e66",
+    "url": "/react-pixabai/static/js/2.ff5adb41.chunk.js"
   },
   {
     "revision": "9b07e90cc3490e95c808",
