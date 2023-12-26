@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
+    const today = new Date();
     return (
         <div className="row">
-            <p>By Tony Rodz © 2020 v1.0 </p>
+            <p>By TonyDev© {today.getFullYear()}</p>
 
         </div>
-    )
-}
+    );
+};
 
 
 

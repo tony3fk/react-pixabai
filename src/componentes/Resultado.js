@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Imagen from './Imagen';
 import Paginacion from './Paginacion';
 
-class Resultado extends Component{
-  
+class Resultado extends Component {
+
     mostrarImagenes = () => {
 
         const imagenes = this.props.imagenes;
@@ -11,10 +11,10 @@ class Resultado extends Component{
         if (imagenes.lenght === 0) return null;
 
         //console.log(imagenes);
-        
-        
+
+
         return (
-             <React.Fragment>
+            <React.Fragment>
                 <div className="col-12 p-5 row">
                     {imagenes.map(imagen => (
                         <Imagen
@@ -23,17 +23,17 @@ class Resultado extends Component{
                         />
                     ))}
                 </div>
-                <Paginacion
+                {imagenes.length > 0 && <Paginacion
                     paginaAnterior={this.props.paginaAnterior}
                     paginaSiguiente={this.props.paginaSiguiente}
-                />
+                />}
             </React.Fragment>
-        )
-           
-        
-   
-    }
-   
+        );
+
+
+
+    };
+
     render() {
         return (
             <React.Fragment>
